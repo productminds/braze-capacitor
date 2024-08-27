@@ -18,7 +18,6 @@ export class HomePage implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    console.log('Oi');
-    console.log(BrazePlugin);
+    BrazePlugin.changeUser('user-id-ios');
   }
 }

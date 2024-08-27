@@ -6,7 +6,7 @@ const config: CapacitorConfig = {
   webDir: 'www',
   cordova: {
     preferences: {
-      'com.braze.api_key': '57baed20-3c70-4ef7-ac2d-07275b024476',
+      'com.braze.api_key': '${apiKey}',
       'com.braze.android_api_endpoint': 'sdk.iad-06.braze.com',
       'com.braze.ios_api_endpoint': 'sdk.iad-06.braze.com',
       'com.braze.android_log_level': '0',
