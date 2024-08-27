@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "532682567621",
+    "project_id": "capacitor-brz",
+    "storage_bucket": "capacitor-brz.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:532682567621:android:e587c8589e799e617025ac",
+        "android_client_info": {
+          "package_name": "io.ionic.starter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxduj0qWEs9SpTF3D_BxnHyb746t665iQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

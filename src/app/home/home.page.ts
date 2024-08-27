@@ -1,5 +1,11 @@
-import { Component } from '@angular/core';
-import { IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/angular/standalone';
+import { Component, OnInit } from '@angular/core';
+import {
+  IonHeader,
+  IonToolbar,
+  IonTitle,
+  IonContent,
+} from '@ionic/angular/standalone';
+declare var BrazePlugin: any;
 
 @Component({
   selector: 'app-home',
@@ -8,6 +14,11 @@ import { IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/angular/stan
   standalone: true,
   imports: [IonHeader, IonToolbar, IonTitle, IonContent],
 })
-export class HomePage {
+export class HomePage implements OnInit {
   constructor() {}
+
+  ngOnInit(): void {
+    console.log('Oi');
+    console.log(BrazePlugin);
+  }
 }
