@@ -25,3 +25,43 @@
 #container a {
   text-decoration: none;
 }
+
+.braze-cc {
+  $default-padding: 15px;
+
+  padding: $default-padding * 2;
+  display: flex;
+  flex-direction: column;
+  gap: $default-padding;
+
+  &__item {
+    border: 1px solid #8c8c8c;
+    flex: 1;
+    display: flex;
+    gap: $default-padding;
+    border-radius: 5px;
+    padding: $default-padding;
+
+    img {
+      height: 40px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__item-title, &__item-description {
+    text-align: left;
+  }
+
+  &__item-title {
+    font-weight: bold;
+  }
+
+  &__item-description {
+    font-size: 14px;
+  }
+}

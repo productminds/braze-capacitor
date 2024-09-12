@@ -1,20 +1,66 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title> Blank </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">{{title}}</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
     <strong>Braze Impl Testing IOS</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <p>
+      Start with Ionic
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://ionicframework.com/docs/components"
+        >UI Components</a
+      >
+    </p>
+
+    <div class="braze-cc">
+      <ng-template ngFor let-card [ngForOf]="cards" let-i="index">
+        <ng-template
+          [ngIf]="card.type === 'Captioned'"
+          [ngIfElse]="otherContent"
+        >
+          <div
+            class="braze-cc__item"
+            [style.backgroundColor]="card.extras.backgroundColor"
+            [style.color]="card.extras.textColor"
+          >
+            <div class="braze-cc__image">
+              <img src="{{card.image}}" alt="Braze images" />
+            </div>
+            <div class="braze-cc__content">
+              <div class="braze-cc__item-title">{{card.title}}</div>
+              <div class="braze-cc__item-description">
+                {{card.cardDescription}}
+              </div>
+            </div>
+          </div>
+        </ng-template>
+
+        <ng-template #otherContent>
+          <div
+            class="braze-cc__item"
+            [style.backgroundColor]="card.extras.backgroundColor"
+            [style.color]="card.extras.textColor"
+          >
+            <div class="braze-cc__content">
+              <div class="braze-cc__item-title">{{card.title}}</div>
+              <div class="braze-cc__item-description">
+                {{card.cardDescription}}
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </ng-template>
+    </div>
   </div>
 </ion-content>
