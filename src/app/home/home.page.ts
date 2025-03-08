@@ -10,6 +10,20 @@ import {
 
 declare var BrazePlugin: any;
 
+declare global {
+  interface Window {
+    app: any;
+  }
+}
+
+window.app = window.app || {}; // Initialize the app object globally
+
+// Now you can add methods to the app object
+window.app.inAppMessageReceived = function (message: string) {
+  console.log("In-App Message received:", message);
+};
+
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -21,7 +35,7 @@ export class HomePage implements OnInit {
   title = 'Hi, Minder';
   cards: any[] = [];
 
-  constructor(private platform: Platform) {}
+  constructor(private platform: Platform) { }
 
   ngOnInit() {
     this.platform.ready().then(() => {
@@ -42,7 +56,7 @@ export class HomePage implements OnInit {
 
   onDeviceReady() {
     this.subscribeToInAppMessages();
-    this.addInAppMessageListener();
+    // this.addInAppMessageListener();
     BrazePlugin.changeUser('user-02');
   }
 
@@ -50,14 +64,6 @@ export class HomePage implements OnInit {
     if (BrazePlugin) {
       BrazePlugin.subscribeToInAppMessage(true);
     }
-  }
-
-  addInAppMessageListener() {
-    // Ensure Braze listener is added after deviceready
-    window.addEventListener('inAppMessageReceived', (event: any) => {
-      console.log('Received In-App Message:', event.detail);
-      this.handleInAppMessage(event.detail);
-    });
   }
 
   handleInAppMessage(message: any) {

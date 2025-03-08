@@ -17,6 +17,10 @@ android {
             ignoreAssetsPattern '!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~'
         }
     }
+        // Adicione o bloco kotlinOptions se não existir
+    kotlinOptions {
+        jvmTarget = "1.8"  // Use 17, que é um alvo compatível
+    }
     buildTypes {
         release {
             minifyEnabled false
