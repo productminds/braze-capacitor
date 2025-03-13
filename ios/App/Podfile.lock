@@ -1,30 +1,30 @@
 PODS:
-  - BrazeKit (10.1.0)
-  - BrazeLocation (10.1.0):
-    - BrazeKit (= 10.1.0)
-  - BrazeUI (10.1.0):
-    - BrazeKit (= 10.1.0)
+  - BrazeKit (11.6.1)
+  - BrazeLocation (11.6.1):
+    - BrazeKit (= 11.6.1)
+  - BrazeUI (11.6.1):
+    - BrazeKit (= 11.6.1)
   - Capacitor (6.1.2):
     - CapacitorCordova
   - CapacitorApp (6.0.1):
     - Capacitor
-  - CapacitorCamera (6.0.2):
+  - CapacitorCamera (6.1.2):
     - Capacitor
   - CapacitorCordova (6.1.2)
-  - CapacitorFilesystem (6.0.1):
+  - CapacitorFilesystem (6.0.3):
     - Capacitor
   - CapacitorHaptics (6.0.1):
     - Capacitor
   - CapacitorKeyboard (6.0.2):
     - Capacitor
-  - CapacitorPreferences (6.0.2):
+  - CapacitorPreferences (6.0.3):
     - Capacitor
   - CapacitorStatusBar (6.0.1):
     - Capacitor
   - CordovaPluginsStatic (6.1.2):
-    - BrazeKit (~> 10.1.0)
-    - BrazeLocation (~> 10.1.0)
-    - BrazeUI (~> 10.1.0)
+    - BrazeKit (~> 11.6.1)
+    - BrazeLocation (~> 11.6.1)
+    - BrazeUI (~> 11.6.1)
     - CapacitorCordova
 
 DEPENDENCIES:
@@ -68,20 +68,20 @@ EXTERNAL SOURCES:
     :path: "../capacitor-cordova-ios-plugins"
 
 SPEC CHECKSUMS:
-  BrazeKit: 6ad539cc8cfd2760c0e1974df17362b8a5c97dbc
-  BrazeLocation: e84bbd252a7629e170fab497f7bf20b1ee8ce399
-  BrazeUI: 6516c7a30396a3b338a685f9b79beea8204ff3ea
-  Capacitor: 679f9673fdf30597493a6362a5d5bf233d46abc2
-  CapacitorApp: 0bc633b4eae40a1f32cd2834788fad3bc42da6a1
-  CapacitorCamera: ed022171dbf3853e68eec877b4d78995378af6b7
+  BrazeKit: 190a4d8bb1f0405e885cdd35c53726702aed4e89
+  BrazeLocation: 2e0c198f30a9e8b56a6331794a69dad40abb7c03
+  BrazeUI: 41fc2e9ce0dd057e0ace9a9657404accf97f7339
+  Capacitor: 69c7f687aabb8d85e543497411e40638b5cc08c0
+  CapacitorApp: f51c08c64df914fc934239fd1b3fc809d62a02f6
+  CapacitorCamera: 9bc7b005d0e6f1d5f525b8137045b60cffffce79
   CapacitorCordova: f48c89f96c319101cd2f0ce8a2b7449b5fb8b3dd
-  CapacitorFilesystem: 37fb3aa5c945b4539ab11c74a5c57925a302bf24
-  CapacitorHaptics: fe689ade56ef20ec9b041a753c6da70c5d8ec9a9
-  CapacitorKeyboard: 2700f9b18687be021e28b5a09b59eb151a46d5e0
-  CapacitorPreferences: e8284bf740cf8c6d3f25409af3c01df87dfeb5a1
-  CapacitorStatusBar: b81d4fb5d4e0064c712018071b3ab4b810b39a63
-  CordovaPluginsStatic: f27eb16918faf01bb49e8465dec9d75685777112
+  CapacitorFilesystem: 59270a63c60836248812671aa3b15df673fbaf74
+  CapacitorHaptics: 05d33e20e394b1977dfd2a00a2621e04098164c1
+  CapacitorKeyboard: 5bf4458dd989b56a60ea15c92cbca5fbfae6e9f9
+  CapacitorPreferences: f3eadae2369ac3ab8e21743a2959145b0d1286a3
+  CapacitorStatusBar: 9ed7f06318fd436917072a9bf60fda56d12c8bdb
+  CordovaPluginsStatic: 52dc03b26a945802b42f444ac31041e3d1c1150f
 
 PODFILE CHECKSUM: ebd1451f5db3bce859fc0b96c6a96142fb8dba2e
 
-COCOAPODS: 1.15.2
+COCOAPODS: 1.16.2

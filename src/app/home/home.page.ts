@@ -20,8 +20,21 @@ window.app = window.app || {}; // Initialize the app object globally
 
 // Now you can add methods to the app object
 window.app.inAppMessageReceived = function (message: string) {
-  console.log("In-App Message received:", message);
+  const parsedJson = JSON.parse(message);
+  console.log("In-App Message received:", parsedJson);
+  console.log("Inapp", parsedJson.extras);
 };
+
+window.app.inAppMessageButtonClicked = function (message: string, button: string, uri?: string) {
+  const parsedJson = JSON.parse(message);
+  const parsedButton = JSON.parse(button);
+
+  console.log("Clicked!!", parsedJson);
+  // On Android this is a object, in IOS a simple button ID
+  console.log("Clicked button!", parsedButton);
+  // Optional: On IOS
+  console.log("Clicked button!", uri);
+}
 
 
 @Component({
