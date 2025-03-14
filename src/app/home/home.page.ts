@@ -25,17 +25,15 @@ window.app.inAppMessageReceived = function (message: string) {
   console.log("Inapp", parsedJson.extras);
 };
 
-window.app.inAppMessageButtonClicked = function (message: string, button: string, uri?: string) {
+window.app.inAppMessageClicked = function (message: string, button?: string, uri?: string) {
+  console.log("Entered", message, button, uri);
   const parsedJson = JSON.parse(message);
-  const parsedButton = JSON.parse(button);
+  console.log("Entered2", message, button, uri);
 
   console.log("Clicked!!", parsedJson);
-  // On Android this is a object, in IOS a simple button ID
-  console.log("Clicked button!", parsedButton);
   // Optional: On IOS
   console.log("Clicked button!", uri);
 }
-
 
 @Component({
   selector: 'app-home',
@@ -76,6 +74,7 @@ export class HomePage implements OnInit {
   subscribeToInAppMessages() {
     if (BrazePlugin) {
       BrazePlugin.subscribeToInAppMessage(true);
+      BrazePlugin.subscribeToInAppMessageClicks(true);
     }
   }
 

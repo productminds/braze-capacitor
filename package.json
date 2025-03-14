@@ -32,7 +32,7 @@
     "@capacitor/preferences": "^6.0.2",
     "@capacitor/status-bar": "6.0.1",
     "@ionic/angular": "^8.0.0",
-    "braze-cordova-sdk": "github:productminds/braze-cordova-sdk#feature/inapp_button_clicked_events",
+    "braze-cordova-sdk": "github:productminds/braze-cordova-sdk#feature/inapp-clicked-events",
     "cordova-plugin-ionic-webview": "^5.0.1",
     "es6-template-strings": "^2.0.1",
     "ionicons": "^7.2.1",
